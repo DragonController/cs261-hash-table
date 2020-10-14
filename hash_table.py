@@ -10,3 +10,6 @@ class HashTable:
 
     def __init__(self, size = DEFAULT_SIZE):
         self.size = size
+
+    def __setitem__(self, index, value):
+        return 0
