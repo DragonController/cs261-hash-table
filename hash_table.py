@@ -16,3 +16,6 @@ class HashTable:
 
     def __getitem__(self, index):
         return 0
+
+    def hash(self, index):
+        return hash(index) % self.size
