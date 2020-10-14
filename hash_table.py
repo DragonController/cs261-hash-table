@@ -6,4 +6,7 @@
 
 class HashTable:
 
-    pass
+    DEFAULT_SIZE = 10
+
+    def __init__(self):
+        self.size = self.DEFAULT_SIZE
