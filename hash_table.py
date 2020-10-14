@@ -8,5 +8,5 @@ class HashTable:
 
     DEFAULT_SIZE = 10
 
-    def __init__(self):
-        self.size = self.DEFAULT_SIZE
+    def __init__(self, size = DEFAULT_SIZE):
+        self.size = size

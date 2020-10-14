@@ -29,12 +29,12 @@ class TestHashTable(unittest.TestCase):
         h = HashTable()
         self.assertEqual(10, h.size)
 
-    # def test_instantiation_with_size(self):
-    #     """
-    #     A HashTable can be instantiated with an optional size.
-    #     """
-    #     h = HashTable(33)
-    #     self.assertEqual(33, h.size)
+    def test_instantiation_with_size(self):
+        """
+        A HashTable can be instantiated with an optional size.
+        """
+        h = HashTable(33)
+        self.assertEqual(33, h.size)
 
     # """
     # Basic API
