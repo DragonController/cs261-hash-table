@@ -13,3 +13,6 @@ class HashTable:
 
     def __setitem__(self, index, value):
         return 0
+
+    def __getitem__(self, index):
+        return 0
