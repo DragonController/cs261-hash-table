@@ -202,16 +202,16 @@ class TestHashTable(unittest.TestCase):
         h = HashTable(3)
         self.assertEqual([], h.values())
 
-    # def test_values(self):
-    #     """
-    #     A HashTable can produce a list of its values.
-    #     """
-    #     h = HashTable()
-    #     h['foo'] = 'bar'
-    #     h['baz'] = 'qux'
-    #     values = h.values()
-    #     values.sort()
-    #     self.assertEqual(['bar', 'qux'], values)
+    def test_values(self):
+        """
+        A HashTable can produce a list of its values.
+        """
+        h = HashTable()
+        h['foo'] = 'bar'
+        h['baz'] = 'qux'
+        values = h.values()
+        values.sort()
+        self.assertEqual(['bar', 'qux'], values)
 
     # """
     # Time complexity
