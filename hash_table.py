@@ -10,14 +10,16 @@ class HashTable:
 
     def __init__(self, size = DEFAULT_SIZE):
         self.size = size
-        self.data = [[], [], []]
+        self.data = []
+        for _ in range(size):
+            self.data.append([])
 
     def __setitem__(self, key, value):
-        self.data = [[], [], [[key, value]]]
+        self.data[self.hash(key)] = [[key, value]]
 
     def __getitem__(self, key):
         try:
-            return self.data[2][0][1]
+            return self.data[self.hash(key)][0][1]
         except:
             return None
 
