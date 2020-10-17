@@ -42,5 +42,9 @@ class HashTable:
             self.data[index] = []
 
     def keys(self):
-        return []
+        keys = []
+        for index1 in range(len(self.data)):
+            for index2 in range(len(self.data[index1])):
+                keys.append(self.data[index1][index2][0])
+        return keys
     
