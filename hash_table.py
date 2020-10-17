@@ -11,11 +11,17 @@ class HashTable:
     def __init__(self, size = DEFAULT_SIZE):
         self.size = size
         self.data = []
-        for _ in range(size):
+        for _ in range(self.size):
             self.data.append([])
 
     def __setitem__(self, key, value):
-        self.data[self.hash(key)] = [[key, value]]
+        exist = False
+        for index in range(len(self.data[self.hash(key)])):
+            if self.data[self.hash(key)][index][0] == key:
+                self.data[self.hash(key)][index] = [key, value]
+                exist = True
+        if not exist:
+            self.data[self.hash(key)].append([key, value])
 
     def __getitem__(self, key):
         try:
