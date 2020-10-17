@@ -12,10 +12,10 @@ class HashTable:
         self.size = size
         self.data = [[], [], []]
 
-    def __setitem__(self, index, value):
-        return 0
+    def __setitem__(self, key, value):
+        self.data = [[], [], [[key, value]]]
 
-    def __getitem__(self, index):
+    def __getitem__(self, key):
         return 0
 
     def hash(self, object):
