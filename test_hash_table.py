@@ -213,36 +213,36 @@ class TestHashTable(unittest.TestCase):
         values.sort()
         self.assertEqual(['bar', 'qux'], values)
 
-    # """
-    # Time complexity
-    # """
+    """
+    Time complexity
+    """
 
-    # def test_retrieval_is_constant_time(self):
-    #     """
-    #     Retrieving a value from a dictionary should take the same amount of time
-    #     no matter how many k-v pairs it contains. It should be O(... what?)
-    #     """
-    #     time_samples = []
-    #     key = fake_key()
-    #     value = fake_value()
-    #     # Create a small hash table with just one k-v in it.
-    #     small_table = HashTable()
-    #     small_table[key] = value
-    #     # Create a large hash table with 20,000 k-vs in it.
-    #     large_table = HashTable(20000)
-    #     for _ in range(10000):
-    #         large_table[fake_key()] = fake_value()
-    #     large_table[key] = value
-    #     for _ in range(9999):
-    #         large_table[fake_key()] = fake_value()
-    #     # Calculate the average retrieval time for both small and large tables
-    #     small_average_elapsed_time = average_retrieval_time(small_table, key)
-    #     large_average_elapsed_time = average_retrieval_time(large_table, key)
-    #     # Test that the average retrieval time for both small and large tables
-    #     # is about the same.
-    #     self.assertAlmostEqual(small_average_elapsed_time,\
-    #         large_average_elapsed_time,\
-    #         delta=small_average_elapsed_time*2) # Just a small amount, the 2 isn't significant.
+    def test_retrieval_is_constant_time(self):
+        """
+        Retrieving a value from a dictionary should take the same amount of time
+        no matter how many k-v pairs it contains. It should be O(... what?)
+        """
+        time_samples = []
+        key = fake_key()
+        value = fake_value()
+        # Create a small hash table with just one k-v in it.
+        small_table = HashTable()
+        small_table[key] = value
+        # Create a large hash table with 20,000 k-vs in it.
+        large_table = HashTable(20000)
+        for _ in range(10000):
+            large_table[fake_key()] = fake_value()
+        large_table[key] = value
+        for _ in range(9999):
+            large_table[fake_key()] = fake_value()
+        # Calculate the average retrieval time for both small and large tables
+        small_average_elapsed_time = average_retrieval_time(small_table, key)
+        large_average_elapsed_time = average_retrieval_time(large_table, key)
+        # Test that the average retrieval time for both small and large tables
+        # is about the same.
+        self.assertAlmostEqual(small_average_elapsed_time,\
+            large_average_elapsed_time,\
+            delta=small_average_elapsed_time*2) # Just a small amount, the 2 isn't significant.
 
     # def test_constant_retrieval_order(self):
     #     """

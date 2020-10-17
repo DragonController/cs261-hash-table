@@ -25,7 +25,9 @@ class HashTable:
 
     def __getitem__(self, key):
         try:
-            return self.data[self.hash(key)][0][1]
+            for index in range(len(self.data[self.hash(key)])):
+                if self.data[self.hash(key)][index][0] == key:
+                    return self.data[self.hash(key)][index][1]
         except:
             return None
 
