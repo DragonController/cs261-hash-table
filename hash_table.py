@@ -40,4 +40,7 @@ class HashTable:
     def clear(self):
         for index in range(self.size):
             self.data[index] = []
+
+    def keys(self):
+        return []
     
