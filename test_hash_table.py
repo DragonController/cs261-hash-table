@@ -97,16 +97,16 @@ class TestHashTable(unittest.TestCase):
         h[11] = 'bar' # 11 is the key, not an index :)
         self.assertEqual([[11, 'bar']], h.data[2])
 
-    # """
-    # Retrieval Basics
-    # """
+    """
+    Retrieval Basics
+    """
 
-    # def test_retrieve_none(self):
-    #     """
-    #     Retreiving a value for non-existent key returns None.
-    #     """
-    #     h = HashTable(3)
-    #     self.assertEqual(None, h['foo'])
+    def test_retrieve_none(self):
+        """
+        Retreiving a value for non-existent key returns None.
+        """
+        h = HashTable(3)
+        self.assertEqual(None, h['foo'])
 
     # def test_retrieve_one(self):
     #     """

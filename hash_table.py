@@ -16,7 +16,7 @@ class HashTable:
         self.data = [[], [], [[key, value]]]
 
     def __getitem__(self, key):
-        return 0
+        return None
 
     def hash(self, object):
         return hash(object) % self.size
