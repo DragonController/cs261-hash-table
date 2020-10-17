@@ -36,3 +36,8 @@ class HashTable:
         for index in range(len(self.data[self.hash(key)])):
             if self.data[self.hash(key)][index][0] == key:
                 self.data[self.hash(key)][index] = []
+    
+    def clear(self):
+        for index in range(self.size):
+            self.data[index] = []
+    
