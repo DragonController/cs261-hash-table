@@ -108,13 +108,13 @@ class TestHashTable(unittest.TestCase):
         h = HashTable(3)
         self.assertEqual(None, h['foo'])
 
-    # def test_retrieve_one(self):
-    #     """
-    #     The value of an inserted k-v pair is retrievable.
-    #     """
-    #     h = HashTable(3)
-    #     h['foo'] = 'bar'
-    #     self.assertEqual('bar', h['foo'])
+    def test_retrieve_one(self):
+        """
+        The value of an inserted k-v pair is retrievable.
+        """
+        h = HashTable(3)
+        h['foo'] = 'bar'
+        self.assertEqual('bar', h['foo'])
 
     # """
     # Insertion
