@@ -195,12 +195,12 @@ class TestHashTable(unittest.TestCase):
         self.assertEqual(['baz', 'foo'], keys)
 
 
-    # def test_initial_values(self):
-    #     """
-    #     A HashTable initially has no values.
-    #     """
-    #     h = HashTable(3)
-    #     self.assertEqual([], h.values())
+    def test_initial_values(self):
+        """
+        A HashTable initially has no values.
+        """
+        h = HashTable(3)
+        self.assertEqual([], h.values())
 
     # def test_values(self):
     #     """
