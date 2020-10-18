@@ -28,6 +28,7 @@ class HashTable:
             for index in range(len(self.data[self.hash(key)])):
                 if self.data[self.hash(key)][index][0] == key:
                     return self.data[self.hash(key)][index][1]
+            return None
         except:
             return None
 
