@@ -24,13 +24,9 @@ class HashTable:
             self.data[self.hash(key)].append([key, value])
 
     def __getitem__(self, key):
-        try:
-            for index in range(len(self.data[self.hash(key)])):
-                if self.data[self.hash(key)][index][0] == key:
-                    return self.data[self.hash(key)][index][1]
-            return None
-        except:
-            return None
+        for pair in self.data[self.hash(key)]:
+            if pair[0] == key:
+                return pair[1]
 
     def hash(self, object):
         return hash(object) % self.size
@@ -38,7 +34,7 @@ class HashTable:
     def delete(self, key):
         for index in range(len(self.data[self.hash(key)])):
             if self.data[self.hash(key)][index][0] == key:
-                self.data[self.hash(key)][index] = []
+                self.data[self.hash(key)][index] = [None]
     
     def clear(self):
         for index in range(self.size):
