@@ -24,9 +24,10 @@ class HashTable:
             self.data[self.hash(key)].append([key, value])
 
     def __getitem__(self, key):
-        for pair in self.data[self.hash(key)]:
-            if pair[0] == key:
-                return pair[1]
+        for index in range(len(self.data[self.hash(key)])):
+            if self.data[self.hash(key)][index][0] == key:
+                return self.data[self.hash(key)][index][1]
+        return None
 
     def hash(self, object):
         return hash(object) % self.size
